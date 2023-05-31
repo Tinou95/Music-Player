@@ -21,21 +21,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //Apparition container avec gsap lors du clique sur le bouton next ou prev
   nextBtn.addEventListener('click', () => {
-    gsap.fromTo(image, {scale: 1}, {scale: 1.2, duration: 0.5, ease: "power2.inOut", yoyo: true, repeat: 1});
-    gsap.fromTo(container, {opacity: 0, y: 50}, {opacity: 1, y: 0, duration: 1});
-    gsap.fromTo(container, {y: -100}, {y: 0, duration: 1, ease: "bounce.out"});
+    gsap.fromTo(image, {scale: 1}, {scale: 1.1, duration: 0.3, ease: "power2.inOut", yoyo: true, repeat: 1});
     //et jouer le son clic_souris.mp3
-  
     clic_souris.play();
   });
   prevBtn.addEventListener('click', () => {
 
-    gsap.fromTo(image, {scale: 1}, {scale: 1.2, duration: 0.5, ease: "power2.inOut", yoyo: true, repeat: 1});
-    gsap.fromTo(container, {opacity: 0, y: 50}, {opacity: 1, y: 0, duration: 1});
-    gsap.fromTo(container, {y: -100}, {y: 0, duration: 1, ease: "bounce.out"});
+    gsap.fromTo(image, {scale: 1}, {scale: 1.1, duration: 0.3, ease: "power2.inOut", yoyo: true, repeat: 1});
     //et jouer le son clic_souris.mp3
     clic_souris.play();
-
   });
 
 
@@ -60,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             music.volume = lastVolume;
             volumeSlider.value = lastVolume;
+
         }
     });
 
